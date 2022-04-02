@@ -13,7 +13,7 @@ class Navbar extends React.Component {
                     <div className="nav-item flex  justify-between p-5 md:px-20 lg:px-48">
 
                         <div className="logo kiri">
-                            <a href="#">
+                            <a href="">
                                 <img src={Logo} alt="logo" className="w-36" />
                             </a>
                         </div>
