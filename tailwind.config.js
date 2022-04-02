@@ -1,7 +1,11 @@
 module.exports = {
-  content: ["./src/.jsx",".public/index.html"],
+  content: ["public/**/*.html", "src/**/*.jsx"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter : ["Inter"],
+      },
+    },
   },
   plugins: [],
 }
