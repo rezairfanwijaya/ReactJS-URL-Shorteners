@@ -64,7 +64,15 @@ class Main extends React.Component {
             <>
                 {/* input long url */}
                 <div className="main py-7 flex flex-col px-10 gap-4 md:flex-row md:gap-3 md:justify-center md:px-20 lg:px-48">
+                {
+                    this.state.isOpen 
+                    ?
+                    
                     <input type="text" placeholder="Long URL here" className="h-11 px-3 placeholder:text-[#8B8A8A] placeholder:text-sm rounded-md outline-none md:w-full" name="longLink" onChange={this.inputHandler} />
+                    :
+                    
+                    <input type="text" placeholder="Long URL here" className="h-11 px-3 placeholder:text-[#8B8A8A] placeholder:text-sm rounded-md outline-none md:w-full border-2 border-[#6122CB]" name="longLink" onChange={this.inputHandler} />
+                }
 
                     {/* jika isOpen adalah false maka button disable dan background pudar */}
 
@@ -90,11 +98,11 @@ class Main extends React.Component {
                             </div>
 
                             <div className="shorLink mt-2">
-                                <div className="short-link-cover bg-white py-2 rounded-md px-3 border-2 border-[#EE6123] hover:border-[#DB4E10] relative">
-                                    <span><a href={this.state.longLink} target="_blank" className="hover:underline">{this.state.shortLink}</a></span>
-                                    <button className="copy-to-clipboard" onClick={this.copyToClipboard}>
-                                        <div className="copy-link absolute top-0 -right-1 bg-[#EE6123] py-2 px-4 rounded-tr-md rounded-br-md lg:px-10 hover:bg-[#DB4E10]">
-                                            <img src={copy} alt='copy' className="w-6 lg:w-6" />
+                                <div className="short-link-cover bg-white py-1.5 rounded-md px-3 border-2 border-[#EE6123] hover:border-[#DB4E10] relative">
+                                    <span><a href={this.state.longLink} target="_blank" className="underline decoration-[#6122CB]">{this.state.shortLink}</a></span>
+                                    <button className="copy-to-clipboard ">
+                                        <div className="copy-link absolute top-0 -right-1 -bottom-0 bg-[#EE6123] py-2 px-4 rounded-tr-md rounded-br-md lg:px-10 hover:bg-[#DB4E10] ">
+                                            <img src={copy} alt='copy' className="w-5 lg:w-5" />
                                         </div>
                                     </button>
                                 </div>
